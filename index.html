@@ -2,10 +2,9 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>Nuestra Boda</title>
     <link rel="stylesheet" href="Invitacion.css">
-    <script src="Invitacion.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap">
 </head>
@@ -16,23 +15,23 @@
             <!-- Contenedor de la foto principal -->
             <div class="photo-container">
                 <!-- Cambiar src por la ruta de tu foto -->
-                <img  src="tatas1.jpg" alt="Foto de la pareja">
+                <img src="tatas1.jpg" alt="Foto de la pareja">
                 <!-- Si no tienes foto aún, usa este placeholder: -->
                 <!-- <div class="photo-placeholder">💕</div> -->
             </div>
             
             <h1 class="title">Nuestra Boda</h1>
             <p class="subtitle">Te invitamos a celebrar nuestro amor</p>
-            <div class="arrow-down" id="scrollDown">&#9660;</div>
+            <div class="arrow-down" id="scrollDown" role="button" tabindex="0" aria-label="Desplazarse hacia abajo">&#9660;</div>
         </section>
         
         <!-- Cita -->
-        <div class="quote-section section-animate" data-animation="fadeIn">
+        <section class="quote-section section-animate" data-animation="fadeIn">
             <p class="quote">A veces lo que empieza como una locura, se convierte en lo mejor de tu vida</p>
-        </div>
+        </section>
         
         <!-- Fecha y contador -->
-        <div class="date-section section-animate" data-animation="fadeInUp">
+        <section class="date-section section-animate" data-animation="fadeInUp">
             <p class="waiting-text">TE ESPERAMOS EL DÍA</p>
             <p class="date">6 de Julio</p>
             
@@ -59,18 +58,18 @@
             </div>
             
             <button class="button" id="confirmarAsistenciaBtn">CONFIRMAR ASISTENCIA</button>
-        </div>
+        </section>
 
-        <div class="modal" id="confirmarAsistenciaModal">
+        <div class="modal" id="confirmarAsistenciaModal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
             <div class="modal-content">
-                <span class="close-modal">&times;</span>
-                <h2>Confirmar Asistencia</h2>
+                <button class="close-modal" aria-label="Cerrar modal">&times;</button>
+                <h2 id="modal-title">Confirmar Asistencia</h2>
                 <div class="confirmacion-info">
                     <p>Para confirmar tu asistencia, por favor contáctanos:</p>
                     <div class="contact-info">
                         <p><strong>📱 WhatsApp:</strong></p>
                         <a href="https://wa.me/573153508155?text=Hola,%20confirmo%20mi%20asistencia%20a%20la%20boda%20del%206%20de%20julio" 
-                        class="whatsapp-link" target="_blank">
+                        class="whatsapp-link" target="_blank" rel="noopener noreferrer">
                             315 350 8155
                         </a>
                         <p class="contact-note">Haz clic en el número para enviar WhatsApp</p>
@@ -80,15 +79,15 @@
         </div>
                 
         <!-- Información de la ceremonia -->
-        <div class="info-section section-animate" data-animation="fadeInUp">
+        <section class="info-section section-animate" data-animation="fadeInUp">
             <div class="icon">⛪</div>
             <h2 class="section-title">CEREMONIA</h2>
             <p class="info-text">17:00hs, en la Parroquia de la Medalla Milagrosa.</p>
             <button class="button" id="llegarCeremonia">LLEGAR A LA CEREMONIA</button>
-        </div>
+        </section>
         
         <!-- Nuestra historia -->
-        <div class="info-section section-animate" data-animation="fadeInUp">
+        <section class="info-section section-animate" data-animation="fadeInUp">
             <h2 class="section-title">NUESTRA HISTORIA</h2>
             <div class="gallery">
                 <div class="gallery-item section-animate" data-animation="zoomIn">
@@ -98,28 +97,28 @@
                     <img src="/api/placeholder/300/300" alt="Foto de pareja 2">
                 </div>
             </div>
-        </div>
+        </section>
         
         <!-- Código de vestimenta -->
-        <div class="info-section section-animate" data-animation="fadeInUp">
+        <section class="info-section section-animate" data-animation="fadeInUp">
             <div class="icon">👗👔</div>
             <h2 class="section-title">Nuestra historia se viste de gala!</h2>
             <p class="info-text">Y TÚ TAMBIÉN!!</p>
             
             <div class="icon section-animate" data-animation="fadeInUp" style="margin-top: 40px;">🎁</div>
             <p class="info-text">Si deseas hacernos un regalo, recuerda que es lluvia de sobres.</p>
-        </div>
+        </section>
         
         <!-- Confirmación de asistencia -->
-        <div class="info-section section-animate" data-animation="fadeInUp">
+        <section class="info-section section-animate" data-animation="fadeInUp">
             <div class="icon section-animate" data-animation="fadeInUp" style="margin-top: 40px;">🎵</div>
             <p class="info-text">¡Queremos armar la playlist perfecta!</p>
             <p class="info-text">Decinos cuales son las canciones que no pueden faltar en la fiesta</p>
             <button class="button" id="sugerirCancion">SUGERIR CANCIÓN</button>
-        </div>
+        </section>
         
         <!-- Google Drive -->
-        <div class="info-section section-animate" data-animation="fadeInUp">
+        <section class="info-section section-animate" data-animation="fadeInUp">
             <div class="icon">📁</div>
             <h2 class="section-title">¡Revive la magia de nuestro gran día!</h2>
             <p class="info-text">Compartí tus fotos en nuestro álbum de Google Drive</p>
@@ -130,12 +129,12 @@
                     <img src="/api/placeholder/400/300" alt="Pareja romántica">
                 </div>
             </div>
-        </div>
+        </section>
         
         <!-- Agradecimiento final -->
-        <div class="thank-you section-animate" data-animation="fadeInUp">
+        <section class="thank-you section-animate" data-animation="fadeInUp">
             <p class="info-text">¡Gracias por ser parte de este capítulo tan importante de nuestras vidas!</p>
-        </div>
+        </section>
         
         <!-- Footer -->
         <footer>
@@ -145,8 +144,8 @@
     </div>
     
     <!-- Botón de música -->
-    <button class="music-control" id="musicControl">&#10074;&#10074;</button>
+    <button class="music-control" id="musicControl" aria-label="Controlar música">&#10074;&#10074;</button>
 
-    <script src="script.js"></script>
+    <script src="Invitacion.js"></script>
 </body>
 </html>
