@@ -206,12 +206,11 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', adjustHeightsForMobile);
     window.addEventListener('orientationchange', adjustHeightsForMobile);
     
-    // Prevenir el zoom no deseado en formularios en iOS
-    document.addEventListener('touchmove', function(event) {
-        if (event.scale !== 1) {
-            event.preventDefault();
-        }
+    if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+    document.addEventListener('gesturestart', function(e) {
+        e.preventDefault();
     }, { passive: false });
+}
     
     // Mejor manejo del audio en móviles
     if (isMobile()) {
