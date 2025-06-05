@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Inicialización de audio
     const audio = new Audio();
-    audio.src = "https://cdnjs.cloudflare.com/ajax/libs/ion-sound/3.0.7/sounds/button_click.mp3"; // Música de muestra
+    audio.src = "Musica.mp3"; // Música de muestra
     audio.loop = true;
     let musicPlaying = false;
     
