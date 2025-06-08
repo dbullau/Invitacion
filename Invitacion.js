@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Inicialización de audio
     const audio = new Audio();
-    audio.src = "Musica.mp3"; // Música de muestra
+    audio.src = "Armando.mp3"; // Música de muestra
     audio.loop = true;
     let musicPlaying = false;
     
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Función del contador actualizada
     function updateCountdown() {
-        const weddingDate = new Date("July 6, 2025 17:00:00").getTime();
+        const weddingDate = new Date("July 6, 2025 11:30:00").getTime();
         const now = new Date().getTime();
         const timeLeft = weddingDate - now;
         
@@ -119,20 +119,21 @@ document.addEventListener('DOMContentLoaded', function() {
     // Funciones para los botones que quedaron
     function llegarCeremonia() {
         // URL de Google Maps para la ubicación de la ceremonia
-        const ubicacionCeremonia = "https://maps.google.com/?q=Parroquia+de+la+Medalla+Milagrosa";
+        const ubicacionCeremonia = "https://maps.app.goo.gl/MX5BXAQARczKi35v8";
         window.open(ubicacionCeremonia, '_blank');
     }
     
     function sugerirCancion() {
         // Abrir formulario para sugerir canciones
-        window.open("https://forms.gle/tuFormularioDeCanciones", '_blank');
+        window.open("https://open.spotify.com/playlist/4B047hPca9LKhrt4ZbTTob?si=F86EodUqTrCyqIjmo4Fw-A&pt=1951eddcbe202cb04ca61d8f25e4cdbd", '_blank');
     }
     
     function subirFotos() {
-        // Abrir Google Drive para subir fotos
-        window.open("https://drive.google.com/drive/folders/tuCarpetaDeGoogleDrive", '_blank');
+    // Abrir Google Drive para subir fotos
+    window.open("https://drive.google.com/drive/folders/1gQ0W9Ih5v_aF6HthxD6jqE-bnE6FN7V1?usp=sharing", '_blank');
     }
-    
+
+
     // Sistema de animaciones al hacer scroll
     function checkScroll() {
         const animatedElements = document.querySelectorAll('.section-animate');
@@ -225,8 +226,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Función para agendar fecha (si quieres mantenerla)
 function agendarFecha() {
-    const startDate = new Date("July 6, 2025 17:00:00");
-    const endDate = new Date("July 6, 2025 23:00:00");
+    const startDate = new Date("July 6, 2025 11:30:00");
+    const endDate = new Date("July 6, 2025 17:00:00"); // Puedes ajustar la hora de finalización si lo deseas
+
     
     const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=Boda&dates=${formatDateForCalendar(startDate)}/${formatDateForCalendar(endDate)}&details=Ceremonia%20de%20boda&location=Parroquia%20de%20la%20Medalla%20Milagrosa`;
     
