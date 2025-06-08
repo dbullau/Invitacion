@@ -1033,3 +1033,61 @@ body {
         font-size: 16px; /* Previene zoom automático en iOS */
     }
 }
+
+/* Botón redondo con flechas laterales */
+.scroll-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 9999px;
+    background-color: white;
+    border: 2px solid var(--primary-color);
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-family: inherit;
+    user-select: none;
+}
+
+/* Flechas izquierda y derecha */
+.arrow-icon {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    animation: sideBounce 1.5s infinite;
+}
+
+/* Texto central */
+.scroll-text {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    animation: pulseText 1.5s infinite;
+}
+
+/* Animación del texto */
+@keyframes pulseText {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+
+/* Animación lateral para flechas */
+@keyframes sideBounce {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(4px); }
+}
+
+/* Hover y focus */
+.arrow-down:hover .scroll-button,
+.arrow-down:focus .scroll-button {
+    background-color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+.arrow-down:hover .scroll-text,
+.arrow-down:focus .scroll-text,
+.arrow-down:hover .arrow-icon,
+.arrow-down:focus .arrow-icon {
+    color: var(--white);
+}
