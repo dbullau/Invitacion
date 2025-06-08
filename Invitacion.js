@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Función del contador actualizada
     function updateCountdown() {
-        const weddingDate = new Date("July 6, 2025 11:30:00").getTime();
+        const weddingDate = new Date("July 6, 2025 11:00:00").getTime();
         const now = new Date().getTime();
         const timeLeft = weddingDate - now;
         
